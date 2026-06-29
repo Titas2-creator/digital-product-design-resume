@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap");
+
+:root {
+  --font-display: "Melrose", "Cormorant Garamond", Georgia, serif;
+  --font-body: "Glendale", "Source Serif 4", Georgia, serif;
+  --font-label: "Inter", Arial, sans-serif;
+}

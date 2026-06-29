@@ -1,0 +1,271 @@
+:root {
+  --maroon: #6A2135;
+  --cream: #F7F2EA;
+  --beige: #E9E1D6;
+  --text: #292929;
+  --light-border: #D8CDC3;
+}
+
+* {
+  box-sizing: border-box;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--beige);
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+.resume-shell {
+  align-items: center;
+  background: var(--beige);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.resume-page {
+  background: var(--cream);
+  color: var(--text);
+  height: 297mm;
+  overflow: hidden;
+  padding: 32px;
+  position: relative;
+  width: 210mm;
+}
+
+.resume-header {
+  min-height: 150px;
+  position: relative;
+}
+
+.header-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.resume-header h1 {
+  color: var(--maroon);
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 0.95;
+  margin: 0 0 18px;
+}
+
+.student-title,
+.tagline {
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.student-title {
+  font-weight: 500;
+}
+
+.contour-decoration {
+  fill: none;
+  height: 176px;
+  left: 208px;
+  opacity: 0.05;
+  position: absolute;
+  stroke: var(--maroon);
+  stroke-width: 1.1;
+  top: -20px;
+  width: 510px;
+}
+
+.header-rule,
+.section-rule {
+  background: var(--maroon);
+  height: 1px;
+}
+
+.header-rule {
+  margin-bottom: 28px;
+  opacity: 0.9;
+}
+
+.resume-grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: minmax(0, 35fr) minmax(0, 65fr);
+}
+
+.left-column,
+.right-column {
+  min-width: 0;
+}
+
+.resume-section {
+  margin-bottom: 22px;
+}
+
+.right-column .resume-section {
+  margin-bottom: 24px;
+}
+
+.resume-section h2 {
+  color: var(--maroon);
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 1.1;
+  margin: 0 0 9px;
+  text-transform: uppercase;
+}
+
+.section-rule {
+  margin-bottom: 10px;
+  opacity: 0.75;
+}
+
+.section-content {
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.section-content p {
+  margin: 0;
+}
+
+.contact-list {
+  margin: 0;
+}
+
+.contact-row {
+  border-bottom: 1px solid var(--light-border);
+  padding: 0 0 9px;
+}
+
+.contact-row + .contact-row {
+  padding-top: 9px;
+}
+
+.contact-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.contact-row dt {
+  color: var(--maroon);
+  font-family: var(--font-label);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.contact-row dd {
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.55;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-row a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.simple-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.simple-list li {
+  border-bottom: 1px solid var(--light-border);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.7;
+  padding: 4px 0;
+}
+
+.simple-list li:first-child {
+  padding-top: 0;
+}
+
+.simple-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.education-block {
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.education-block .institution {
+  color: var(--maroon);
+  font-weight: 500;
+}
+
+.empty-section {
+  min-height: 70px;
+}
+
+.empty-value {
+  display: inline-block;
+  min-height: 1em;
+}
+
+@page {
+  margin: 0;
+  size: A4 portrait;
+}
+
+@media print {
+  html,
+  body,
+  #root {
+    height: 297mm;
+    margin: 0;
+    min-height: 297mm;
+    width: 210mm;
+  }
+
+  body,
+  .resume-shell {
+    background: var(--cream);
+  }
+
+  .resume-shell {
+    display: block;
+    min-height: auto;
+    padding: 0;
+  }
+
+  .resume-page {
+    height: 297mm;
+    margin: 0;
+    page-break-after: avoid;
+    page-break-before: avoid;
+    page-break-inside: avoid;
+    width: 210mm;
+  }
+}
